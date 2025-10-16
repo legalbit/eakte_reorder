@@ -1,2 +1,12 @@
 # eakte_reorder
-Merge single PDF files into one file, sorted by creation date from the PDF metadata
+
+In der Justiz hält die elektronische Akte zunehmend Einzug und wird Rechtsanwältinnen und Rechtsanwälten über Akteneinsichtsportale zur Verfügung gestellt. Im zentralen Akteneinsichtsportal gibt es zwei Möglichkeiten, die Dateien herunterzuladen: Einerseits gibt es eine einzelne PDF-Datei, die den gesamten Datenbestand abbildet, und andererseits – je nach Verfügbarkeit – eine ZIP-Datei, die aus mehreren PDF-Dokumenten besteht. In dieser ZIP-Datei ist jedes Dokument (zum Beispiel ein Beschluss, eine Vernehmung oder ein Vermerk) als separate Datei abgelegt.  
+
+Traditionell werden Akten in der Justiz so geführt, dass jeder Posteingang mehr oder weniger chronologisch abgeheftet wird. Die Dokumente in der Akte werden anschließend seitenweise foliiert, d. h., jedes einzelne Blatt erhält oben rechts eine fortlaufende Ziffer. Diese Ziffer ist üblicherweise innerhalb der gesamten Akte einmalig. Eine Ausnahme stellen lediglich einige Behörden dar, die jeden Band einer Akte beginnend mit "1" neu nummerieren. Die Foliierung ermöglicht es unter anderem, die Reihenfolge der Aufnahme der Schriftstücke in die Akte genau nachzuvollziehen, z. B. bei der Entnahme einzelner Blätter. Es kommt auch vor, dass auf bereits eingeordneten Seiten im Nachhinein handschriftliche Vermerke angebracht werden. Solche Änderungen lassen sich in der physischen Akte nachvollziehen, zumal sie in der Regel mit einem Datum und einer Unterschrift versehen werden. 
+
+In einer elektronischen Akte ist mir aufgefallen, dass in dem „Gesamt-PDF” mehrfach die Blattzahl „1” vorkam, als wären mehrere Dateien nach der Nummerierung der Seiten zusammengeführt worden. Als ich die einzelnen PDF-Dateien nun anhand des Änderungsdatums sortiert habe, ergab sich eine komplett andere Reihenfolge. Es ist unklar, inwiefern und aus welchem Grund ein Dokument verändert wurde. Diese fehlende Transparenz beeinträchtigt sowohl die Übersichtlichkeit als auch die Verlässlichkeit der Aktenführung und ist m. E. ein wesentliches Problem. Aktuell ist es nicht möglich, sich einen sachgerechten Überblick über die Entstehungsgeschichte und die "Entwicklung" einer Akte zu verschaffen.
+
+<img width="415" height="178" alt="pdf-file-metadata" src="https://github.com/user-attachments/assets/df9a0ae6-f19a-450e-90c0-ae249bfc1e42" />
+
+Mit diesem Skript können Sie die ZIP-Datei (bitte in „zipped.zip“ umbenennen) entpacken und die PDF-Dateien anhand des Änderungsdatums (Modification Date, „mdate“), wie es in den Metadaten der jeweiligen PDF-Datei gespeichert ist, sortieren.
+
